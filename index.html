@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/model.css"/>
+<script src="js/userData.js"></script>
+<script src="js/login.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/groceryItem.js"></script>
+<script src="js/model.js"></script>
+</head>
+<body>
+
+<div class="container" id="loginDiv">
+  <!-- <form action="/action_page.php"> -->
+    <div class="row">
+      <h2 style="text-align:center">Register for Grocery or Login </h2>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <input id="regUserName" type="text" name="username" placeholder="Username Or Email" required>
+        <input id="regUserPassWord" type="password" name="password" placeholder="password" required>
+        <input id="regUserRePassWord" type="password" name="password" placeholder="Re-type password" required>
+    
+        <!-- <a href="#" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+         </a>
+        <a href="#" class="twitter btn">
+          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+        </a>
+        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+          </i> Login with Google+
+        </a> -->
+      </div>
+
+      <div class="col">
+      
+
+        <input id="loginUserName" type="text" name="username" placeholder="Username" required>
+        <input id="loginUserPassword" type="password" name="password" placeholder="Password" required>
+        <input type="button" value="Login" onclick="login()">
+      </div>
+      
+    </div>
+  <!-- </form> -->
+    
+<div class="bottom-container">
+    <div class="row">
+      <div class="col">
+          <input type="button" value="Register" onclick="registerUser()">
+       
+      </div>
+      <div class="col">
+          <input type="button" value="Forgot password?">
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="cartDiv" style="display: none;">
+    <div class="row" >
+        <div class="col2">  
+                 <label id="lblLoginUser" style=" float:left;"></label>
+       </div>
+       <div class="col1">  
+        <input type="button" id="btnViewCart" value="View Cart" onclick="viewMyCart()" />
+    </div>
+        <div class="col1">  
+        <input type="button" value="Logout" onclick="logout()" >
+        </div>
+      
+    </div>
+</br>
+</br>
+    <div class="row scrollDiv" id="groceryData">
+        
+
+        <div id="myCart" class="modal scrollDiv">
+
+            <!-- Modal content -->
+            <div class="modal-content" id="loggedInUserCart">
+              <span class="close" onclick="closeMyCart()">&times;</span>
+             
+            </div>
+          
+          </div>
+    </div>
+
+</div>
+</body>
+</html>
